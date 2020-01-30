@@ -1,14 +1,16 @@
-let healthCount = 100;
-let hitCount = 0;
-let playerImage = "./honey-badger.jpg";
-let playerName = "Honey - the badger";
+// let healthCount = 100;
+// let hitCount = 0;
+// let playerImage = "./honey-badger.jpg";
+// let playerName = "Honey - the badger";
 
-// let player = {
-//   name: "Hone the badger",
-//   image: "./honey-badger.jpg",
-//   hitCount: 0,
-//   healthCount: 100
-// }
+// NOTE switch from using globals to using an object
+
+let player1 = {
+  name: "Player 1",
+  playerImage: "./honey-badger.jpg",
+  hitCount: 0,
+  healthCount: 100
+}
 
 let healthElem = document.getElementById("health-count");
 let hitElem = document.getElementById("hit-count");
@@ -20,9 +22,9 @@ let playerNameElem = document.getElementById("player-name");
 function playGame(hitType) {
   console.log(hitType);
   decrementHealth(hitType);
-  hitCount++;
-  if (healthCount < 0) {
-    healthCount = 0;
+  player1.hitCount++;
+  if (player1.healthCount < 0) {
+    player1.healthCount = 0;
     drawGameOver()
   }
 
@@ -40,13 +42,13 @@ function playGame(hitType) {
 function decrementHealth(item) {
   switch (item) {
     case "slap":
-      healthCount--;
+      player1.healthCount--;
       break;
     case "punch":
-      healthCount -= 5;
+      player1.healthCount -= 5;
       break;
     case "kick":
-      healthCount -= 10;
+      player1.healthCount -= 10;
       break;
     default:
       alert("bad item in switch of decrementHealth()")
@@ -54,11 +56,18 @@ function decrementHealth(item) {
   }
 }
 
+function resetGame() {
+  player1.hitCount = 0;
+  player1.healthCount = 100;
+  gameOverElem.innerHTML = "";
+  updateGame();
+}
+
 function updateGame() {
-  healthElem.innerText = healthCount.toString();
-  hitElem.innerText = hitCount.toString();
-  playerNameElem.innerText = playerName;
-  imageElem.src = playerImage;
+  healthElem.innerText = player1.healthCount.toString();
+  hitElem.innerText = player1.hitCount.toString();
+  playerNameElem.innerText = player1.playerName;
+  imageElem.src = player1.playerImage;
 }
 
 function drawGameOver() {
