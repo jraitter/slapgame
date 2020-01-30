@@ -2,3 +2,9 @@
   height: 200px;
   width: 250px;
 }
+/* NOTE the overlay is covering the buttons making them unusabel
+        to fix, make the overlay smaller [jsr - decided not to use]*/
+.smaller-overlay{
+  height: 200px;
+  width: 200px;
+}
