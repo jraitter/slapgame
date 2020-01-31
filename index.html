@@ -48,14 +48,13 @@
         <div class="card">
           <div class="card-body">
             <h5>Use these buttons to increase damage rate of attack buttons</h5>
-            <button type="button" data-toggle="button" class="btn btn-primary"
-              onclick="giveModifier('fire')">Fire</button>
-            <button type="button" class="btn btn-primary" onclick="giveModifier('knife')">Knife</button>
-            <button type="button" class="btn btn-primary" onclick="giveModifier('gun')">Gun</button>
+            <button type="button" id="fire" class="btn btn-primary" onclick="giveModifier('fire')">Fire</button>
+            <button type="button" id="knife" class="btn btn-primary" onclick="giveModifier('knife')">Knife</button>
+            <button type="button" id="sword" class="btn btn-primary" onclick="giveModifier('sword')">Sword</button>
             <h5>Use these buttons to decrease damage rate of attack buttons</h5>
-            <button type="button" class="btn btn-primary" onclick="giveModifier('block')">Block</button>
-            <button type="button" class="btn btn-primary" onclick="giveModifier('shield')">Shield</button>
-            <h5>Modifiers: </h5><span id="mod-list">item in list</span>
+            <button type="button" id="block" class="btn btn-primary" onclick="giveModifier('block')">Block</button>
+            <button type="button" id="shield" class="btn btn-primary" onclick="giveModifier('shield')">Shield</button>
+            <h5>Modifiers: </h5><span id="mod-list"></span>
           </div>
         </div>
 
