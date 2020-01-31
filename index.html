@@ -29,7 +29,7 @@
           <div class="" id="game-over"></div>
           <div class="card-body">
             <h5 class="card-title">Game Play: </h5>
-            <p class="card-text">Use the slap button to reduce the health of the target.
+            <p class="card-text">Use the attack buttons to reduce the health of the target.
             </p>
             <h5>Player name: <span id="player-name"></span></h5>
             <h5>Health: <span id="health-count"></span></h5>
@@ -38,6 +38,12 @@
             <button type="button" class="btn btn-primary" onclick="playGame('slap')">Slap</button>
             <button type="button" class="btn btn-primary" onclick="playGame('punch')">Punch</button>
             <button type="button" class="btn btn-primary" onclick="playGame('kick')">Kick</button>
+
+            <button type="button" class="btn btn-primary" onclick="giveModifier('fire')">Fire</button>
+            <button type="button" class="btn btn-primary" onclick="giveModifier('knife')">Knife</button>
+            <button type="button" class="btn btn-primary" onclick="giveModifier('gun')">Gun</button>
+            <button type="button" class="btn btn-primary" onclick="giveModifier('block')">Block</button>
+            <button type="button" class="btn btn-primary" onclick="giveModifier('shield')">Shield</button>
           </div>
         </div>
         <!-- this button need to be outside the card, so the card overlay does not disable it -->
