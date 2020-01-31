@@ -23,7 +23,7 @@
 
   <main class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-6">
         <div class="card">
           <img id="player-image" src="" class="card-img-top img-200px" alt="...">
           <div class="" id="game-over"></div>
@@ -39,15 +39,26 @@
             <button type="button" class="btn btn-primary" onclick="playGame('punch')">Punch</button>
             <button type="button" class="btn btn-primary" onclick="playGame('kick')">Kick</button>
 
-            <button type="button" class="btn btn-primary" onclick="giveModifier('fire')">Fire</button>
-            <button type="button" class="btn btn-primary" onclick="giveModifier('knife')">Knife</button>
-            <button type="button" class="btn btn-primary" onclick="giveModifier('gun')">Gun</button>
-            <button type="button" class="btn btn-primary" onclick="giveModifier('block')">Block</button>
-            <button type="button" class="btn btn-primary" onclick="giveModifier('shield')">Shield</button>
           </div>
         </div>
         <!-- this button need to be outside the card, so the card overlay does not disable it -->
         <button type="button" class="btn btn-primary" onclick="resetGame()">Reset</button>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <div class="card-body">
+            <h5>Use these buttons to increase damage rate of attack buttons</h5>
+            <button type="button" data-toggle="button" class="btn btn-primary"
+              onclick="giveModifier('fire')">Fire</button>
+            <button type="button" class="btn btn-primary" onclick="giveModifier('knife')">Knife</button>
+            <button type="button" class="btn btn-primary" onclick="giveModifier('gun')">Gun</button>
+            <h5>Use these buttons to decrease damage rate of attack buttons</h5>
+            <button type="button" class="btn btn-primary" onclick="giveModifier('block')">Block</button>
+            <button type="button" class="btn btn-primary" onclick="giveModifier('shield')">Shield</button>
+            <h5>Modifiers: </h5><span id="mod-list">item in list</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </main>

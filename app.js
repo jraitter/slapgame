@@ -60,6 +60,7 @@ function resetGame() {
   player.hitCount = 0;
   player.healthCount = 100;
   gameOverElem.innerHTML = "";
+  player.items = [];
   updateGame();
 }
 
